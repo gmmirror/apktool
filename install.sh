@@ -4,6 +4,10 @@ if [[ -d "${PREFIX}/opt/apktool" ]]; then
     command rm -rf "${PREFIX}/opt/apktool"
 fi
 
+if [[ -x "${PREFIX}/bin/apktool" ]]; then
+    command rm -f "${PREFIX}/bin/apktool"
+fi
+
 command mkdir -p "${PREFIX}/opt/apktool"
 
 command wget \
